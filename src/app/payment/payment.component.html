@@ -1,0 +1,119 @@
+<div class="homepage-container">
+  <div class="home-body">
+    <div class="main-content">
+      <div class="content-01">
+        <div class="demo-tab-content">
+          <div class="data-row-heding">
+            <div class="personal-details">Personal Details</div>
+          </div>
+          <div class="data-row">
+            <mat-form-field class="cont1">
+              <input matInput placeholder="First Name" value="" required>
+            </mat-form-field>
+            <mat-form-field class="cont2">
+              <input matInput placeholder="Second Name" value="">
+            </mat-form-field>
+          </div>
+          <div class="data-row">
+            <mat-form-field class="cont1">
+              <input matInput placeholder="Phone Number" value="" required>
+            </mat-form-field>
+            <mat-form-field class="cont2">
+              <input matInput placeholder="Email" value="" required>
+            </mat-form-field>
+          </div>
+          <div class="data-row">
+            <mat-form-field class="cont1">
+              <textarea matInput placeholder="Address"></textarea>
+            </mat-form-field>
+            <div class="cont2"></div>
+          </div>
+
+        </div>
+      </div>
+      <mat-card class="content-02">
+        <mat-tab-group class="demo-tab-group">
+          <mat-tab label="Card Payament">
+            <div class="demo-tab-content">
+              <div class="demo-tab-content">
+
+                <div class="card-data-row1">
+                  <mat-form-field class="cont1-card-type">
+                    <mat-select placeholder="Card Type" required>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{ food.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <div class="cont2"></div>
+                </div>
+                <div class="card-data-row2">
+                  <mat-form-field class="card-cont1">
+                    <input matInput placeholder="Card Number" value="" required>
+                  </mat-form-field>
+                  <mat-form-field class="card-cont2">
+                    <input matInput [matDatepicker]="picker" placeholder="Expiration date" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field class="card-cont3">
+                    <input matInput placeholder="CVC" value="" required>
+                  </mat-form-field>
+                </div>
+                <div class="card-data-row3">
+                  <button mat-raised-button color="primary" class="doPayment" (click)="openDialog()">Do Payment</button>
+                  <!-- Modal -->
+                 
+                </div>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Paypal" disabled>
+            <div class="demo-tab-content">
+
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+    </div>
+
+  </div>
+  <mat-card class="home-fotter">
+    <div class="footer-up">
+      <span class="notice">Need Help Booking?</span>
+      <span class="notice">+94 (071)0 225 225</span>
+      <span class="notice">info@echannelling.com</span>
+    </div>
+    <div class="footer-down">
+
+      <div class="copy-rights">
+        Copyright © 2015 echannelling.com. All Rights Reserved
+      </div>
+
+      <div class="tel">
+        <!-- <br> -->
+        <div>
+          Contact :-
+        </div>
+        <br> t : +94 (071)0 225 225
+        <br> f : +94 (011)2 370 979
+      </div>
+
+      <div class="address">
+        <!-- <br> -->
+        <div>
+          Address :-
+        </div>
+        <br> eChannelling PLC, No.409, R.A.De.Mel Mawatha, Colombo 3, Sri Lanka.
+      </div>
+      <div class="social-meadia-email icon-settings"></div>
+      <a href="https://www.facebook.com/eChannelling/">
+        <div class="social-meadia-facebook icon-settings"></div>
+      </a>
+      <a href="https://twitter.com/echannelling?lang=en">
+        <div class="social-meadia-twitter icon-settings"></div>
+      </a>
+    </div>
+  </mat-card>
+
+</div>

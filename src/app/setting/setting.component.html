@@ -1,0 +1,165 @@
+<div class="homepage-container">
+  <div class="home-body">
+    <div class="main-content">
+      <div class="photo-section">
+        <div class="user-photo">
+          <mat-card class="photo">
+            <img [src]="imagePath" alt="" class="photo-img">
+           
+          </mat-card>
+        </div>
+        <div class="user-discription">
+          <mat-form-field class="disk-cont1">
+            <input matInput placeholder="User Name" [(ngModel)]="userName">
+          </mat-form-field>
+          <mat-form-field class="disk-cont1">
+            <input matInput placeholder="Registration Number"[(ngModel)]="regNo">
+          </mat-form-field>
+          <a href="#" class="change-pass">Change Password</a>
+         
+        </div>
+      </div>
+
+      <mat-card class="tab-section">
+        <mat-tab-group class="demo-tab-group">
+          <mat-tab label="Details">
+            <div class="demo-tab-content"> 
+              <div class="data-row">
+                <mat-form-field class="cont1">
+                  <input matInput placeholder="First Name" [(ngModel)]="Fname" >
+                </mat-form-field>
+                <mat-form-field class="cont2">
+                  <input matInput placeholder="Second Name" [(ngModel)]="Sname">
+                </mat-form-field>
+              </div>
+              <div class="data-row">
+                <mat-form-field class="cont1">
+                  <input matInput placeholder="Phone Number" [(ngModel)]="phone">
+                </mat-form-field>
+                <mat-form-field class="cont2">
+                  <input matInput [matDatepicker]="picker" placeholder="Date Of Birth" [(ngModel)]="date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="data-row">
+                <mat-form-field class="cont1">
+                  <textarea matInput placeholder="Address" [(ngModel)]="addr">
+                  </textarea>
+                </mat-form-field>
+                <mat-form-field class="cont2">
+                  <input matInput placeholder="Email" [(ngModel)]="email">
+                </mat-form-field>
+              </div>
+              <div class="data-row-gender">
+                <span class="lbl-gender">Gender</span>
+                <mat-radio-group class="example-radio-group cont1" [(ngModel)]="gender">
+                  <mat-radio-button  value="male" > Male </mat-radio-button>
+                  <mat-radio-button  value="female" > Female </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Channel History">
+            <div class="demo-tab-content">
+              <div class="example-container mat-elevation-z8">
+                <div class="example-header">
+                  <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                  </mat-form-field>
+                </div>
+
+                <mat-table #table [dataSource]="dataSource">
+
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef> Docter </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                  </ng-container>
+
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight">
+                    <mat-header-cell *matHeaderCellDef> Hospital </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                  </ng-container>
+
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol">
+                    <mat-header-cell *matHeaderCellDef> Free </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                  </ng-container>
+
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Reports">
+            <div class="demo-tab-content-repo">
+              <div class="graph">
+                
+                <div class="graph1">
+                  <div class="title">Your payments for perticular month</div>
+                  <canvas baseChart [data]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                </div>
+                <div class="graph2">
+                    <div class="title">Channeling count per hospital</div>
+                  <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+                </div>
+              </div>
+              <div class="graph-button text-center" style="margin-top: 10px;height: 50%">
+                <button mat-button color="primary" (click)="randomizeType()" style="display: inline-block">Next View</button>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Claim Refund" disabled>
+            No content
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+    </div>
+  </div>
+  <mat-card class="home-fotter">
+
+    <div class="footer-down">
+
+      <div class="copy-rights">
+        Copyright © 2015 echannelling.com. All Rights Reserved
+      </div>
+
+      <div class="tel">
+        <!-- <br> -->
+        <div>
+          Contact :-
+        </div>
+        <br> t : +94 (071)0 225 225
+        <br> f : +94 (011)2 370 979
+      </div>
+
+      <div class="address">
+        <!-- <br> -->
+        <div>
+          Address :-
+        </div>
+        <br> eChannelling PLC, No.409, R.A.De.Mel Mawatha, Colombo 3, Sri Lanka.
+      </div>
+      <div class="social-meadia-email icon-settings"></div>
+      <a href="https://www.facebook.com/eChannelling/">
+        <div class="social-meadia-facebook icon-settings"></div>
+      </a>
+      <a href="https://twitter.com/echannelling?lang=en">
+        <div class="social-meadia-twitter icon-settings"></div>
+      </a>
+    </div>
+  </mat-card>
+
+</div>
