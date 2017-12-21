@@ -25,7 +25,7 @@ export class LoginServiceService {
       userdata: {
         username: 'kasun-123',
         regNo: '1234-6543-5678',
-        imageLink: 'https://mysliit-my.sharepoint.com/personal/it15116420_my_sliit_lk/_layouts/15/guestaccess.aspx?docid=1f618aaa43a1e4bb6bf7bce205e422ecb&authkey=AUe7nQveIT8E9Pck5lZ46yc&expiration=2018-01-24T09%3A09%3A05.000Z&e=4c267d579b8344fd80a0fe21281ab726',
+        imageLink: 'https://lh3.googleusercontent.com/X8sfWgUgmfxPgnrzcfRmOK5JkYJqatvBbjFdoZut9ZoPmfUYW0ynFWjIpURx9QFVV-6FpayF0uy_sloVdYWPXLuHXnOxTivdMbzbospWxRd_ZCO7XcImMlCDWRe-W_LFhAX-h1LTdlgRY0ddgoUofJ8dnztbCOvihxuEHHFLAuJs8cf8fq6Up_PwiakybVysmxcmcOGQ4LsAXban400M_WFQ1UOB55D28djOm530zIend6G0QSM_B5o78OJ-fGQEl0nPv883AOvq_Sp_eQRJLmeOvIXW1HPf52axwy0XgKHXOW9uoYcaKCu2jSa9K5NBEVIVaCx89SyoWzwhfBKffRUKZR9g_LySAn-omUmu5TkalRSft2k5qUGEAzcLYwBI7H8NvwB25TvPf0sChhQnA-8H469Zl-Qowq54xVDN1oL82GyK70EH7AemSvZLhOyzCHoarDFkVF3JnXaHU6r1m3h5FxZ7Rc1K1D63bi8QE1JGTSA0cPv90273V9pTgyTduaCMKiG-c_pIAlcZ77aTEIea1fihB04mBzafJNwBmICF76t48DRJk9w7nT29lBi0VUNSycs2u8LokDpXAU2xE3P35Gy5TFJEqrDUpCA=s637-no',
         first_name: 'Kasun',
         second_name: ' Madusaka',
         telephone: '071-25642012',
