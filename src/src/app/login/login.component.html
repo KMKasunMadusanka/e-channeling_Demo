@@ -1,0 +1,27 @@
+<div class="homepage-container">
+  <div class="home-body">
+    <div class="main-content">
+      <div class="login-container">
+        <div class="header">
+          <img src="./../assets/echannelling-logo.gif" class="img-responsive" alt="" />
+        </div>
+        <div class="body">
+          <mat-form-field class="body-content">
+            <input matInput placeholder="Username" [(ngModel)]="username" required>
+          </mat-form-field>
+          <mat-form-field class="body-content">
+            <input matInput type="password" placeholder="Password" [(ngModel)]="password" required> 
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" class="body-button" (click)="login()">Sign in</button>
+        </div>
+        <div class="fotter">
+          <div>
+            <a href="#">Create account</a> or
+            <a href="#">reset password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

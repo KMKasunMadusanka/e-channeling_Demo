@@ -1,0 +1,74 @@
+.homepage-container{
+    display: flex;
+    height: 100vh;
+    flex-direction:column;
+}
+
+.home-body{
+    display: flex;
+    flex: 15;
+    font-family: 'Alegreya Sans', sans-serif;
+    background-image: url('./../assets/hospital.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: relative;   
+}
+
+.login-container{
+    margin: auto;
+    width: 30%;
+    height: 53%;
+    background-color:rgba(253, 247, 247, 0.74);
+    border-radius: 5px;
+    box-shadow: 0px 0px 21px 1px rgba(243, 243, 243, 0.925);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    order:1;
+    flex: 4;
+    display: flex;
+    flex-direction:column;  
+}
+
+.header{
+    flex: 2;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.body{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh;
+}
+
+.body-content{
+    flex:2;
+}
+
+.body-button{
+    flex :1;
+    
+}
+
+.fotter{
+    flex: 1;
+    margin: auto;
+}
+
+.icon-settings{
+    width: 6.75vh;
+    height: 8vh;
+    background-repeat: no-repeat;
+    margin-top: 1.5vh;
+    margin-right: 2vh;
+}
+
+.img-responsive{
+    width: 35vh;
+    height: 11vh;
+
+}
